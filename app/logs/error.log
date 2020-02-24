@@ -1,0 +1,3 @@
+[24-02-2020 18:33] DB connection failed: SQLSTATE[HY000] [1049] Unknown database 'lloydkwartier' on line 43 of /var/source/app/classes/System/Databases/Database.php
+[24-02-2020 18:33] DB connection failed: SQLSTATE[HY000] [1049] Unknown database 'lloydkwartier' on line 43 of /var/source/app/classes/System/Databases/Database.php
+[24-02-2020 18:36] DB connection failed: SQLSTATE[HY000] [1049] Unknown database 'lloydkwartier' on line 43 of /var/source/app/classes/System/Databases/Database.php

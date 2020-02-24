@@ -1,0 +1,5 @@
+.idea/
+.vagrantuser
+.vagrant/
+_scripts/
+Vagrantfile
