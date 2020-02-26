@@ -1,0 +1,35 @@
+{
+  "name": "koen-benne/lloydkwartier-webpage",
+  "license": "Apache",
+  "description": "Lloydkwartier webpage",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Koen Benne"
+    },
+    {
+      "name": "Furkan Ozdemir"
+    },
+    {
+      "name": "Daniël Abdi"
+    },
+    {
+      "name": "Danny Hu"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "ext-pdo": "*",
+    "ext-fileinfo": "*"
+  },
+
+  "config": {
+    "vendor-dir": "app/vendor"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "System\\": "app/classes/System"
+    }
+  }
+}
