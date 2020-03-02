@@ -3,3 +3,4 @@
 .vagrant/
 _scripts/
 Vagrantfile
+app/config/dbsettings.php

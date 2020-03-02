@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $pageTitle int
+ * @var $pageTitle string
  */
 ?>
 

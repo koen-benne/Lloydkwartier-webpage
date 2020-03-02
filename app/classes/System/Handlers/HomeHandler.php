@@ -30,7 +30,7 @@ class HomeHandler extends BaseHandler
     {
         //Return formatted data
         $this->renderTemplate([
-            'pageTitle' => 'Lloydkwartier'
+            'pageTitle' => 'Lloydkwartier',
         ]);
     }
 
