@@ -1,4 +1,6 @@
 <?php
+require_once "dbsettings.php";
+
 //Define paths
 define("INCLUDES_PATH", __DIR__ . "/../");
 define("RESOURCES_PATH", "public/");
