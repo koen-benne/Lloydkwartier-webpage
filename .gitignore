@@ -4,3 +4,4 @@
 _scripts/
 Vagrantfile
 app/config/dbsettings.php
+app/logs/error.log
