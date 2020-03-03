@@ -48,5 +48,19 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     vagrant up
     ```
 
+* Once the process is done, keep the terminal or git bash window open. You can now enter the following commands
+    ```
+    # This will enable you to use the terminal of the virtualbox
+    vagrant ssh
+    ...
+    # Log in to mariadb
+    sudo mysql
+    ...
+    # Create a new database
+    create schema lloydkwartier;
+    ```
+    
+* Open your browser and type in "lloydkwartier-webpage.local". This result may result in a google search, so don't panic.
+
 ## Acknowledgments
 * [antwanvdm](https://github.com/antwanvdm) for [php7-vagrant](https://github.com/koen-benne/Lloydkwartier-webpage)
