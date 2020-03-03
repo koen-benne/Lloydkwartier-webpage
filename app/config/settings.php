@@ -1,5 +1,5 @@
 <?php
-require_once "dbsettings.php";
+require_once "personalSettings.php";
 
 //Define paths
 define("INCLUDES_PATH", __DIR__ . "/../");

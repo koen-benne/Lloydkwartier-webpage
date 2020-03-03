@@ -3,5 +3,5 @@
 .vagrant/
 _scripts/
 Vagrantfile
-app/config/dbsettings.php
+app/config/personalSettings.php
 app/logs/error.log
