@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Open https://github.com/antwanvdm/php7-vagrant and follow the install guide there up untill the fifth step and come back.
 
-Now run the following commands:
+Now run the following commands in the folder where you want the project to go:
 
 ```
 # Clone the repositories (after navigating to your dev folder)
