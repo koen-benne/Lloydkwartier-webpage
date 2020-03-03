@@ -2,11 +2,7 @@
 
 The web page for the school project at the Lloydkwartier
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Install guide
+## Install guide
 (There will be a fork of the [php7-vagrant](https://github.com/koen-benne/Lloydkwartier-webpage) repo in te future for convenience)
 
 * Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) (needed to provide a 
@@ -50,3 +46,6 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     # Up the project (enter password in process for changing hosts file)
     vagrant up
     ```
+
+## Acknowledgments
+* [antwanvdm](https://github.com/antwanvdm)
