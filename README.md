@@ -48,4 +48,4 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     ```
 
 ## Acknowledgments
-* [antwanvdm](https://github.com/antwanvdm)
+* [antwanvdm](https://github.com/antwanvdm) for [php7-vagrant](https://github.com/koen-benne/Lloydkwartier-webpage)
