@@ -12,26 +12,30 @@ These instructions will get you a copy of the project up and running on your loc
 Open https://github.com/antwanvdm/php7-vagrant and follow the install guide there up untill the fifth step and come back.
 
 Now run the following commands in the folder where you want the project to go:
+(The folder should not contain a folder called Lloydkwartier-webpage)
 
 ```
-# Clone the repositories (after navigating to your dev folder)
-git clone https://github.com/antwanvdm/php7-vagrant.git
+# Clone this repository
 git clone https://github.com/koen-benne/Lloydkwartier-webpage.git
 ...
-# Remove unnecessary files
+# Navigate to folder
 cd Lloydkwartier-webpage
-rm -rf .git LICENSE public .gitignore README.md
-cd ..
+...
+# Clone php7-vagrant repository
+git clone https://github.com/antwanvdm/php7-vagrant.git
 ...
 # Move files from php7-vagrant to Lloydkwartier-webpage
-mv ~/php7-vagrant/* ~/Lloydkwartier-webpage/
+mv ./php7-vagrant/_scripts ./php7-vagrant/Vagrantfile ./
+...
+# Remove php7-vagrant
+rm -r /php7-vagrant
 ...
 # Create the .vagrantuser file (and check them afterwards.)
 # BEWARE: Currently needs a manual path fix on Windows!!
-./Lloydkwartier-webpage/_scripts/create_vagrantuser_file.sh
+./_scripts/create_vagrantuser_file.sh
 ...
 # Run initialize.sh
-./Lloydkwartier-webpage/initialize.sh
+./initialize.sh
 ...
 # Up the project (enter password in process for changing hosts file)
 vagrant up
