@@ -34,6 +34,7 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     mv ./php7-vagrant/_scripts ./php7-vagrant/Vagrantfile ./
     ...
     # Remove php7-vagrant
+    chmod 664 php7-vagrant
     rm -r /php7-vagrant
     ...
     # Create the .vagrantuser file (and check them afterwards.)
