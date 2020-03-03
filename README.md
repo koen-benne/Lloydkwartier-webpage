@@ -22,8 +22,7 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     ```
 
 
-Now run the following commands in the folder where you want the project to go using either git bash (windows) or terminal (mac/linux):
-(The folder should not contain a folder called Lloydkwartier-webpage)
+* Now run the following commands in the folder where you want the project to go using either git bash (windows) or terminal (mac/linux) (The folder should not contain a folder called Lloydkwartier-webpage)
 
     ```
     # Clone this repository
