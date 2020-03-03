@@ -7,7 +7,7 @@ The web page for the school project at the Lloydkwartier
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Install guide
-(There will be a fork of the php7-vagrant repo in te future for convienience)
+(There will be a fork of the php7-vagrant repo in te future for convenience)
 
 Open https://github.com/antwanvdm/php7-vagrant and follow the install guide there up untill the fifth step and come back.
 
