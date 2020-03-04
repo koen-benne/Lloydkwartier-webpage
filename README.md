@@ -35,7 +35,7 @@ support a nice development URL instead of your IP (for Windows you can use 'Git 
     ...
     # Remove php7-vagrant
     chmod 664 php7-vagrant
-    rm -r /php7-vagrant
+    rm -r php7-vagrant
     ...
     # Create the .vagrantuser file (and check them afterwards.)
     # BEWARE: Currently needs a manual path fix on Windows!!
