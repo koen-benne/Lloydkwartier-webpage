@@ -14,45 +14,23 @@ class SigninValidator implements Validator
     /**
      * LoginValidator constructor.
      *
-     * @param User $username
-     * @param string $email
-     * @param string $password
+     * @param string $username
+     * @param string $code
      */
-    public function __construct(string $username, string $email, string $password)
+    public function __construct(string $username, string $code)
     {
         $this->username = $username;
-        $this->email = $email;
-        $this->password = $password;
+        $this->email = $code;
     }
 
     /**
      * Validate the data
+     * @param \PDO $db
      */
     public function validate(\PDO $db): void
     {
-        $emailArray = explode("@", $this->email);
-        if (count($emailArray) !== 2 || count(explode(".", $emailArray[1])) !== 2) {
-            $this->errors[] = "De email is ongeldig.";
-        }
 
-        try {
-            User::getUser($db, $this->email);
-            $this->errors[] = "Deze email is al in gebruik";
-        } catch (\Exception $e) {
 
-        }
-
-        if (empty($this->username)) {
-            $this->errors[] = "Username veld is leeg";
-        }
-
-        if (strlen($this->username) > 50) {
-            $this->errors[] = "Username is te lang";
-        }
-
-        if (empty($this->password)) {
-            $this->errors[] = "Password veld is leeg";
-        }
 
     }
 
