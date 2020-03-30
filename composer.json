@@ -20,7 +20,9 @@
   "minimum-stability": "stable",
   "require": {
     "ext-pdo": "*",
-    "ext-fileinfo": "*"
+    "ext-fileinfo": "*",
+    "ext-curl": "*",
+    "mobiledetect/mobiledetectlib": "^2.8"
   },
 
   "config": {
