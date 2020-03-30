@@ -7,6 +7,7 @@ use System\Form\Data;
 use System\Form\Validation\LoginValidator;
 use System\Form\Validation\SigninValidator;
 use System\APIs\API;
+use System\Lobbies\Lobby;
 
 class HomeHandler extends BaseHandler
 {
@@ -29,15 +30,26 @@ class HomeHandler extends BaseHandler
         $this->api = new API("https://api.github.com");
     }
 
+    protected function info(): void
+    {
+        //Return formatted data
+        $this->renderTemplate([
+            'pageTitle' => 'Lloydkwartier - info',
+        ]);
+    }
+
     protected function home(): void
     {
-        // Do stuff
+        // Redirect to info if there is no code
+        $code = $_GET['code'];
+        if (!isset($code) || !Lobby::lobbyExists($code)) {
+            header("Location: /info");
+        }
 
         $this->api->close();
         //Return formatted data
         $this->renderTemplate([
-            'pageTitle' => 'Lloydkwartier',
+            'pageTitle' => 'Lloydkwartier - join',
         ]);
     }
-
 }
