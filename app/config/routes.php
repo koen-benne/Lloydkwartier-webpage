@@ -1,5 +1,7 @@
 <?php
 $routes = [
     '/' => 'HomeHandler@home',
-    '/info' => 'HomeHandler@info'
+    '/join' => 'GameHandler@join',
+    '/play' => 'GameHandler@play',
+    '/notfound' => 'GameHandler@notFound'
 ];
