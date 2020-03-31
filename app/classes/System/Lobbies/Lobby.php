@@ -20,7 +20,11 @@ class Lobby implements LobbyInterface
         $this->code = $code;
     }
 
-    public static function lobbyExists(string $code) :bool
+    /**
+     * @param string $code
+     * @return bool
+     */
+    public static function isAvailable(string $code) :bool
     {
         // Get if lobby exists
         return true;
