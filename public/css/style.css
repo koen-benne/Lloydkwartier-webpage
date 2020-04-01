@@ -46,6 +46,10 @@ html, body {
     animation: animateTextBg 5s ease-in-out infinite;
 }
 
+.error-page:link {
+    text-decoration: none;
+}
+
 .error-page p::after {
     content: attr(data-p);
     position: absolute;
