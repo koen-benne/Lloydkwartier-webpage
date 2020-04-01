@@ -1,5 +1,11 @@
 const popup = document.querySelector('.full-screen');
+const info = document.getElementById("info");
 
-function togglePopup() {
-    popup.classList.toggle('hidden')
-}
+document.addEventListener("click", function (event) {
+
+    if (event.target === info) {
+        popup.classList.toggle('hidden');
+        info.classList.toggle('close');
+        info.classList.toggle('open');
+    }
+})

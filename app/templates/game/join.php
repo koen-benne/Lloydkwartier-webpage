@@ -1,19 +1,18 @@
 <?php
 /**
- * @var $pageTitle string
  * @var $code string
  */
 ?>
 
 <header>
-<img src="css/images/Battleship.jpg" alt="logo" class="logo">
+    <button id="info" class="open">?</button>
+    <img src="css/images/Battleship.jpg" alt="logo" id="logo">
 </header>
 
-<button onclick="togglePopup()" class="info">?</button>
-
 <div class="full-screen hidden flex-container-center">
-    <button onclick="togglePopup()" class="info-close">?</button>
-    <h3>Voorbeeld van alle regels enz.</h3>
+    <section>
+        <h3>Voorbeeld van alle regels enz.</h3>
+    </section>
 </div>
 
 <form action="" method="post" id="joinForm">
@@ -21,4 +20,3 @@
 </form>
 
 <button form="joinForm" type="submit" name="join" value="<?= $code; ?>" class="submit">Join</button>
-<script src="js/joinScript.js"></script>
