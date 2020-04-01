@@ -1,4 +1,4 @@
 <?php
 $routes = [
-    '/' => 'HomeHandler@home'
+    '' => 'HomeHandler@home'
 ];
