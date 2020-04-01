@@ -56,7 +56,7 @@ class API
                 curl_setopt($this->curl, CURLOPT_POST, 1);
 
                 if ($data)
-                    curl_setopt($this->curl, CURLOPT_POSTFIELDS, $data);
+                    curl_setopt($this->curl, CURLOPT_POSTFIELDS, http_build_query($data));
                 break;
             case "PUT":
                 curl_setopt($this->curl, CURLOPT_PUT, 1);
@@ -65,6 +65,7 @@ class API
                 if ($data)
                     $url = sprintf("%s?%s", $url, http_build_query($data));
         }
+        var_dump($url);
 
         // Optional Authentication:
         if ($this->username !== "" || $this->password !== "") {
