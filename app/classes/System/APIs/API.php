@@ -39,6 +39,8 @@ class API
     }
 
     /**
+     * Post example: call("POST", "/lobby/", ['lobbyCode' => '19919'])
+     *
      * @param $method
      * @param $path
      * @param bool $data
