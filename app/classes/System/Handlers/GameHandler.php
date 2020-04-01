@@ -52,7 +52,8 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - join',
-            'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
+            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'script' => __FUNCTION__ . 'Script',
             'code' => $code
         ]);
     }
@@ -77,7 +78,8 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - set boats',
-            'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
+            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'script' => __FUNCTION__ . 'Script',
         ]);
     }
 
@@ -96,7 +98,8 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - play',
-            'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
+            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'script' => __FUNCTION__ . 'Script',
         ]);
     }
 
