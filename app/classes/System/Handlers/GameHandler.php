@@ -31,19 +31,53 @@ class GameHandler extends BaseHandler
         $this->detect = new \Mobile_Detect();
     }
 
-    protected function notFound(): void
+    protected function join(): void
     {
-        $message = "The lobby that you are looking for does not exist or is full";
-        if (isset($_GET['issue'])) {
-            if ($_GET['issue'] == 2) {
-                $message = "This lobby can no longer be accessed";
+        if (isset($_POST['join'])) {
+            $errors = Validation::signIn($this->api, $_POST['join'], $_POST['username']);
+            if ($errors == null) {
+                //$this->session->set('lobby', Lobby->join($_POST['join'], $_POST['username']));
+                header("Location: /setup");
             }
         }
 
+        // Redirect to notFound if there is no code
+        $code = $_GET['code'] ?? null;
+        if (isset($code) ? Lobby::isAvailable($code) : false) {
+            header("Location: /notfound");
+        }
+
+        // Close cURL
+        $this->api->close();
+        //Return formatted data
         $this->renderTemplate([
-            'pageTitle' => 'Lloydkwartier - Lobby not found',
+            'pageTitle' => 'Lloydkwartier - join',
             'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
-            'message' => $message,
+            'code' => $code
+        ]);
+    }
+
+    protected function setup(): void
+    {
+        $lobby = null;
+        if ($this->session->keyExists('lobby')) {
+            $lobby = $this->session->get('lobby');
+            if ($lobby == null) header("Location: /notfound?issue=2");
+        } else {
+            header("Location: /notfound?issue=1");
+        }
+
+        if (isset($_POST['play'])) {
+            // Go to next page
+            header("Location: /play");
+        }
+
+        // Close cURL
+        $this->api->close();
+        //Return formatted data
+        $this->renderTemplate([
+            'pageTitle' => 'Lloydkwartier - set boats',
+            'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
         ]);
     }
 
@@ -66,29 +100,19 @@ class GameHandler extends BaseHandler
         ]);
     }
 
-    protected function join(): void
+    protected function notFound(): void
     {
-        if (isset($_POST['join'])) {
-            $errors = Validation::signIn($this->api, $_POST['join'], $_POST['username']);
-            if ($errors == null) {
-                //$this->session->set('lobby', Lobby->join($_POST['join'], $_POST['username']));
-                header("Location: /play");
+        $message = "The lobby that you are looking for does not exist or is full";
+        if (isset($_GET['issue'])) {
+            if ($_GET['issue'] == 2) {
+                $message = "This lobby can no longer be accessed";
             }
         }
 
-        // Redirect to info if there is no code
-        $code = $_GET['code'] ?? null;
-        if (isset($code) ? Lobby::isAvailable($code) : false) {
-            header("Location: /notfound");
-        }
-
-        // Close cURL
-        $this->api->close();
-        //Return formatted data
         $this->renderTemplate([
-            'pageTitle' => 'Lloydkwartier - join',
+            'pageTitle' => 'Lloydkwartier - Lobby not found',
             'styles' => $this->detect->isMobile() ? $styles = __FUNCTION__ . 'MobileStyles' : $styles = __FUNCTION__ . 'Styles',
-            'code' => $code
+            'message' => $message,
         ]);
     }
 
