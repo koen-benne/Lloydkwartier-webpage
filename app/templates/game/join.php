@@ -5,7 +5,7 @@
 ?>
 
 <header>
-    <button id="info" class="open">?</button>
+    <button id="info" class="info-open">?</button>
     <img src="/css/images/Battleship.jpg" alt="logo" id="logo">
 </header>
 

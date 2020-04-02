@@ -9,34 +9,31 @@ button {
     outline: none;
 }
 
-.info {
+#info {
+    padding: 0;
+    text-align: center;
+    z-index: 1;
     border-radius: 100%;
-    border-color: black;
-    background-color: #272727;
     text-decoration: none;
     font-size: larger;
-    color: white;
     width: 40px;
     height: 40px;
     position: absolute;
     top: 2%;
     right: 5%;
+}
+
+.info-open {
+    border-color: black;
+    background-color: #272727;
+    color: white;
 }
 
 .info-close {
-    border-radius: 100%;
     border-color: #272727;
     background-color: white;
-    text-decoration: none;
-    font-size: larger;
     color: #272727;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 2%;
-    right: 5%;
 }
-
 
 .full-screen {
     position: absolute;
@@ -59,7 +56,7 @@ button {
     display: none;
 }
 
-.logo {
+#logo {
     width: 350px;
 
 }

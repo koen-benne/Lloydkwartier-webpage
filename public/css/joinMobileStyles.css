@@ -8,6 +8,8 @@ button {
 }
 
 #info {
+    padding: 0;
+    text-align: center;
     z-index: 1;
     border-radius: 100%;
     text-decoration: none;
@@ -17,34 +19,19 @@ button {
     position: absolute;
     top: 2%;
     right: 5%;
- }
+}
 
-.open {
+.info-open {
     border-color: black;
     background-color: #272727;
     color: white;
 }
 
-.close {
-    border-color: #272727;
-    background-color: white;
-    color: #272727;
-}
-
 .info-close {
-    border-radius: 100%;
     border-color: #272727;
     background-color: white;
-    text-decoration: none;
-    font-size: larger;
     color: #272727;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 2%;
-    right: 5%;
 }
-
 
 .full-screen {
     position: absolute;
