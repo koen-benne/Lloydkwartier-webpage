@@ -40,7 +40,7 @@ class WebBootstrap implements BootstrapInterface
     public function setup(): void
     {
         //Get the url from the nginx config & check existence (if not: 404!)
-        $route = (!isset($_GET['_url']) || $_GET['_url'] == "" ? "" : $_GET['_url']);
+        $route = rtrim((!isset($_GET['_url']) || $_GET['_url'] == "" ? "" : $_GET['_url']), "/");
         require_once INCLUDES_PATH . "config/routes.php";
         //Check existence of route & initiate correct Handler & actions based on route
         /** @var $routes array */
