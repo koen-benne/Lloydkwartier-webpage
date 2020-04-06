@@ -1,0 +1,95 @@
+/* Pzl make it look acceptable on computer */
+
+body {
+    text-align: center;
+    margin-top: 35%;
+}
+
+button {
+    outline: none;
+}
+
+#info {
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+    border-radius: 100%;
+    text-decoration: none;
+    font-size: larger;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+
+.info-open {
+    border-color: black;
+    background-color: #272727;
+    color: white;
+}
+
+.info-close {
+    border-color: #272727;
+    background-color: white;
+    color: #272727;
+}
+
+.full-screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+.flex-container-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#logo {
+    width: 350px;
+
+}
+
+input[type = "text"] {
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #272727;
+    border-radius: 24px;
+}
+
+.submit {
+    background: #272727;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+}
+
+.submit:active {
+    background-color: white; /* Green */
+    color: #272727;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+
+}

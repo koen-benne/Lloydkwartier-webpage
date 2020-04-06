@@ -12,10 +12,9 @@ use System\Lobbies\Lobby;
 class HomeHandler extends BaseHandler
 {
     /**
-     * @var Database
+     * @var \Mobile_Detect
      */
-    private $db;
-    private $api;
+    private $detect;
 
     /**
      * ReservationHandler constructor.
@@ -27,6 +26,7 @@ class HomeHandler extends BaseHandler
     {
         parent::__construct($templateName);
         //$this->db = (new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME))->getConnection();
+        $this->detect = new \Mobile_Detect();
         $this->api = new API("https://lloydkwartierapi.herokuapp.com/", "admin", "@ikbenadmin123");
     }
 
@@ -34,11 +34,14 @@ class HomeHandler extends BaseHandler
     {
         $lobby = Lobby::generateLobby($this->api);
 
-        $this->api->close();
+
+        // Cool info stuff
+
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'script' => __FUNCTION__ . 'Script',
         ]);
     }
-
 }
