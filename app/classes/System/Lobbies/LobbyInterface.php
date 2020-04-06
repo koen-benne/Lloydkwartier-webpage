@@ -4,7 +4,7 @@
 namespace System\Lobbies;
 
 
-use System\Utils\API;
+use System\APIs\API;
 
 interface LobbyInterface
 {

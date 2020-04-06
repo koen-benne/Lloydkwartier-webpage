@@ -67,7 +67,6 @@ class API
                 if ($data)
                     $url = sprintf("%s?%s", $url, http_build_query($data));
         }
-        var_dump($url);
 
         // Optional Authentication:
         if ($this->username !== "" || $this->password !== "") {

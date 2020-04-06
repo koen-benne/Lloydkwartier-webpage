@@ -5,3 +5,5 @@ _scripts/
 Vagrantfile
 app/config/personalSettings.php
 app/logs/error.log
+composer.lock
+app/vendor/

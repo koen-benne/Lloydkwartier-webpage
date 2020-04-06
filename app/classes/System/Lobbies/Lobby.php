@@ -4,7 +4,8 @@
 namespace System\Lobbies;
 
 
-use System\Utils\API;
+use System\APIs\API;
+use System\Utils\StringUtils;
 
 class Lobby implements LobbyInterface
 {
@@ -37,7 +38,15 @@ class Lobby implements LobbyInterface
      */
     public static function generateLobby(API $api): Lobby
     {
-        return Lobby($api->call("GET", 'createLobby'));
+        $code = null;
+        while ($code === null || $api->call("GET", "lobby/", ['lobbyCode' => $code]) === null) {
+            $code = StringUtils::genRandString();
+        }
+        var_dump($code);
+
+        var_dump($api->call("POST", 'lobby/', ['lobbyCode' => $code]));
+
+        return new Lobby($api->call("GET", 'createLobby'));
     }
 
     /**
