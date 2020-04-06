@@ -16,5 +16,5 @@
 <body>
 <?= ($content ?? ''); ?>
 </body>
-<script src="js/<?= $script ?? 'script' ?>.js"></script>
+<script src="/js/<?= $script ?? 'script' ?>.js"></script>
 </html>

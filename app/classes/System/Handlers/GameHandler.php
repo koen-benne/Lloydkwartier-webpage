@@ -52,7 +52,7 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - join',
-            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
             'script' => __FUNCTION__ . 'Script',
             'code' => $code
         ]);
@@ -78,7 +78,7 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - set boats',
-            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
             'script' => __FUNCTION__ . 'Script',
         ]);
     }
@@ -98,7 +98,7 @@ class GameHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - play',
-            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
             'script' => __FUNCTION__ . 'Script',
         ]);
     }
@@ -114,7 +114,7 @@ class GameHandler extends BaseHandler
 
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier - Lobby not found',
-            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
             'script' => __FUNCTION__ . 'Script',
             'message' => $message,
         ]);

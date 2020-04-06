@@ -5,8 +5,8 @@
 ?>
 
 <header>
-    <button id="info" class="open">?</button>
-    <img src="css/images/Battleship.jpg" alt="logo" id="logo">
+    <button id="info" class="info-open">?</button>
+    <img src="/css/images/Battleship.jpg" alt="logo" id="logo">
 </header>
 
 <div class="full-screen hidden flex-container-center">

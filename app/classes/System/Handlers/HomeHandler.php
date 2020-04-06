@@ -32,7 +32,7 @@ class HomeHandler extends BaseHandler
         //Return formatted data
         $this->renderTemplate([
             'pageTitle' => 'Lloydkwartier',
-            'styles' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
+            'style' => $this->detect->isMobile() ? __FUNCTION__ . 'MobileStyles' : __FUNCTION__ . 'Styles',
             'script' => __FUNCTION__ . 'Script',
         ]);
     }
