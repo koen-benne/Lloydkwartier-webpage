@@ -39,6 +39,8 @@ class API
     }
 
     /**
+     * Post example: call("POST", "/lobby/", ['lobbyCode' => '19919'])
+     *
      * @param $method
      * @param $path
      * @param bool $data
@@ -56,7 +58,7 @@ class API
                 curl_setopt($this->curl, CURLOPT_POST, 1);
 
                 if ($data)
-                    curl_setopt($this->curl, CURLOPT_POSTFIELDS, $data);
+                    curl_setopt($this->curl, CURLOPT_POSTFIELDS, http_build_query($data));
                 break;
             case "PUT":
                 curl_setopt($this->curl, CURLOPT_PUT, 1);
